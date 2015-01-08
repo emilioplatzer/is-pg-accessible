@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "database": "test_db",
+    "port": 5432, 
+    "user": "test_user",
+    "password": "this.is.the.pass.but.must.be.longer"
+}

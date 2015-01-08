@@ -16,12 +16,15 @@
     "accessible",
     "sql"
   ],
-  "x-main": "./lib/is-pg-accessible",
+  "scripts": {
+    "start": "node test.js"
+  },
   "license": "BSD-3",
   "engines": {
     "node": ">= 0.6"
   },
   "dependencies": {
+    "fs": "",
     "pg": "~3.2.0"
   }
 }
