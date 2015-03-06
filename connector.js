@@ -1,32 +1,35 @@
 var fs = require('fs');
 var pg = require('pg');
 
+
 function isPgAccesible(configFileName,end){
     console.log(configFileName);
     var conJson = fs.readFileSync(configFileName, 'utf8');
 
     console.log("Parsing json");
     var conObj = JSON.parse(conJson);
-
-    console.log('Connecting with',conObj);
-    pg.connect(conObj, function(err, client, done) {
+    
+    function handleError(err,done,end){
         if(err) {
             console.error('error, connecting:', err);
             done();
             end(err);
-            return;
+            return true;
         }
-        client.query('SELECT $1::int AS number', ['1'], function(err, result) {
-            if(err) {
-                console.error('error running query:', err);
-                done();
-                end(err);
-                return;
-            }
-            console.log('all ok:',result.rows[0].number,'= 1');
-            done();
-            end(null,1);
-        });
+        return false;
+    }
+
+    console.log('Connecting with',conObj);
+    pg.connect(conObj, function(err, client, done) {
+        if(!handleError(err,done,end)){
+            client.query('SELECT $1::int AS number', ['1'], function(err, result) {
+                if(!handleError(err,done,end)){
+                    console.log('all ok:',result.rows[0].number,'= 1');
+                    done();
+                    end(null,1);
+                }
+            });
+        }
     });
 }
 
