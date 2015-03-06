@@ -7,13 +7,15 @@ Can I connect to postgresql?
 
 If I couldn't, Can I connect to postgresql with php?
 
-## instrucciones
+# Instructions
 
  1. Try to install with npm
 
+```
     $ npm install
+```    
     
- 2. Write your own database connection parameters in a new file local_connect_info.json (to start you can copy connect_info.json)
+ 2. Write your own database connection parameters in a new file local-connect-info.json (to start you can copy connect-info.json)
  
  3. Create the database
  

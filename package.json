@@ -17,13 +17,19 @@
     "sql"
   ],
   "scripts": {
-    "start": "node test.js"
+    "start": "node manual-test.js",
+    "test": "mocha --reporter spec --bail --check-leaks test.js",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test.js",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test.js"
   },
   "license": "BSD-3",
   "engines": {
     "node": ">= 0.6"
   },
   "dependencies": {
-    "pg": "~3.2.0"
+    "pg": "^4.3.0",
+    "expect.js": "~0.3.1",
+    "mocha": "^2.1.0",
+    "istanbul": "^0.3.7"
   }
 }
