@@ -1,7 +1,7 @@
 
-var isPgAccesible=require('./connector.js');
+var isPgAccessible=require('./connector.js');
 
-isPgAccesible("local-connect-info.json",function(){
+isPgAccessible("local-connect-info.json",function(){
     console.log('end of tests');
     process.exit();
 });

@@ -2,7 +2,7 @@ var fs = require('fs');
 var pg = require('pg');
 
 
-function isPgAccesible(configFileName,end){
+function isPgAccessible(configFileName,end){
     console.log(configFileName);
     var conJson = fs.readFileSync(configFileName, 'utf8');
 
@@ -33,4 +33,4 @@ function isPgAccesible(configFileName,end){
     });
 }
 
-exports = module.exports = isPgAccesible;
+exports = module.exports = isPgAccessible;
