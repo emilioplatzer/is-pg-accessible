@@ -7,17 +7,16 @@ matrix:
 install:
   - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version)
   - npm install
+  - copy appveyor-connect-info.json local-connect-info.json
+  - SET PGUSER=postgres
+  - SET PGPASSWORD=Password12!
+  - PATH=C:\Program Files\PostgreSQL\9.3\bin\;%PATH%
+  - createdb test_db
 build: off
 test_script:
   - node --version
   - npm --version
   - npm run test-ci
 version: "{build}"
-before_build:
-  - copy appveyor-connect-info.json local-connect-info.json
-  - SET PGUSER=postgres
-  - SET PGPASSWORD=Password12!
-  - PATH=C:\Program Files\PostgreSQL\9.3\bin\;%PATH%
-  - createdb test_db
 services: 
   - postgresql
