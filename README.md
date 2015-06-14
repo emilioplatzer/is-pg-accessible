@@ -1,9 +1,14 @@
 # is-pg-accessible
 Lets know if pg is installable, accessible and operative. 
 
-[![NPM Version][npm-image]][npm-url]
-[![Linux Build][travis-image]][travis-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
+![extending](https://img.shields.io/badge/stability-extending-orange.svg)
+[![version](https://img.shields.io/npm/v/is-pg-accesible.svg)](https://npmjs.org/package/is-pg-accesible)
+[![downloads](https://img.shields.io/npm/dm/is-pg-accesible.svg)](https://npmjs.org/package/is-pg-accesible)
+[![linux](https://img.shields.io/travis/emilioplatzer/is-pg-accesible/master.svg)](https://travis-ci.org/emilioplatzer/is-pg-accesible)
+[![windows](https://ci.appveyor.com/api/projects/status/emilioplatzer/is-pg-accesible?svg=true)](https://ci.appveyor.com/project/emilioplatzer/is-pg-accesible)
+[![coverage](https://img.shields.io/coveralls/emilioplatzer/is-pg-accesible/master.svg)](https://coveralls.io/r/emilioplatzer/is-pg-accesible)
+[![climate](https://img.shields.io/codeclimate/github/emilioplatzer/is-pg-accesible.svg)](https://codeclimate.com/github/emilioplatzer/is-pg-accesible)
+[![dependencies](https://img.shields.io/david/emilioplatzer/is-pg-accesible.svg)](https://david-dm.org/emilioplatzer/is-pg-accesible)
 
 
 Can I install pg with npm? 
@@ -29,9 +34,3 @@ If I couldn't, Can I connect to postgresql with php?
     $ npm start
 ```
     
-[npm-image]: https://img.shields.io/npm/v/expect-called.svg?style=flat
-[npm-url]: https://npmjs.org/package/expect-called
-[travis-image]: https://img.shields.io/travis/emilioplatzer/expect-called/master.svg?label=linux&style=flat
-[travis-url]: https://travis-ci.org/emilioplatzer/expect-called
-[coveralls-image]: https://img.shields.io/coveralls/emilioplatzer/expect-called/master.svg?style=flat
-[coveralls-url]: https://coveralls.io/r/emilioplatzer/expect-called
